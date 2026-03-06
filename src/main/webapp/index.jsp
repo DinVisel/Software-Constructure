@@ -37,8 +37,8 @@
                         <input type="hidden" name="taskId" value="<%= task.getId() %>">
                         <input type="checkbox" name="action" value="toggle" onchange="this.form.submit()" <%= task.isCompleted() ? "checked" : "" %>>
                     </form>
-                    <span class="todo-name"><%= task.getName() %></span>
-                    <div class="todo-actions">
+                        <span class="todo-name"><%= task.getTitle() %></span>
+                        <div class="todo-actions">
                         <form action="TasksServlet" method="post" style="display:inline;">
                             <input type="hidden" name="taskId" value="<%= task.getId() %>">
                             <button class="btn btn-link p-0" type="submit" name="action" value="edit"><i class="bi bi-pencil"></i></button>
